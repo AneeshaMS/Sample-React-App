@@ -25,7 +25,7 @@ const AddData = ({ getUsers }) => {
     e.preventDefault();
     console.log("Data added:", formData);
     const response = await axios.post(
-      "http://localhost:8080/users/add",
+      "http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users/add",
       formData
     );
     alert(response.data.message);

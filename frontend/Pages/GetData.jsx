@@ -9,12 +9,12 @@ const GetData = () => {
     getUsers();
   }, []);
   const getUsers = () => {
-    fetch("http://localhost:8080/users")
+    fetch("http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   };
   const deleteUser = async (id) => {
-    await fetch(`http://localhost:8080/users/${id}`, {
+    await fetch(`http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users/${id}`, {
       method: "DELETE",
     });
     getUsers();
