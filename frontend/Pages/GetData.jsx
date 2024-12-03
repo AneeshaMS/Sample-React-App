@@ -9,17 +9,14 @@ const GetData = () => {
     getUsers();
   }, []);
   const getUsers = () => {
-    fetch("http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users")
+    fetch("http://13.49.244.225/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   };
   const deleteUser = async (id) => {
-    await fetch(
-      `http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users/${id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    await fetch(`http://13.49.244.225/users/${id}`, {
+      method: "DELETE",
+    });
     getUsers();
   };
   return (

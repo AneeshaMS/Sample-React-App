@@ -37,7 +37,7 @@ const EditData = ({ user, getUsers }) => {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        `http://ec2-13-49-244-225.eu-north-1.compute.amazonaws.com/users/${user._id}`,
+        `http://13.49.244.225/users/${user._id}`,
         formData
       );
       alert(response.data.message);
