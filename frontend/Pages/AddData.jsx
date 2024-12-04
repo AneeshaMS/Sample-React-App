@@ -25,7 +25,7 @@ const AddData = ({ getUsers }) => {
     e.preventDefault();
     console.log("Data added:", formData);
     const response = await axios.post(
-      "http://13.49.244.225/users/add",
+      "https://myapp.tgwebapps.com/users/add",
       formData
     );
     alert(response.data.message);

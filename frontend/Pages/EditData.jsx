@@ -37,7 +37,7 @@ const EditData = ({ user, getUsers }) => {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        `http://13.49.244.225/users/${user._id}`,
+        `https://myapp.tgwebapps.com/users/${user._id}`,
         formData
       );
       alert(response.data.message);

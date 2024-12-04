@@ -9,12 +9,12 @@ const GetData = () => {
     getUsers();
   }, []);
   const getUsers = () => {
-    fetch("http://13.49.244.225/users")
+    fetch("https://myapp.tgwebapps.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   };
   const deleteUser = async (id) => {
-    await fetch(`http://13.49.244.225/users/${id}`, {
+    await fetch(`https://myapp.tgwebapps.com/users/${id}`, {
       method: "DELETE",
     });
     getUsers();
